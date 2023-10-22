@@ -30,6 +30,11 @@ Meteorite is proudly multichain and is currently deployed on:
 - Filecoin
 - Scroll
 
+## Play
+
+`bun install`
+`bun start dev`
+
 ## Contributing
 
 We welcome contributions from the community. Please submit a pull request or open an issue if you'd like to make improvements or suggest enhancements.

@@ -1,99 +1,47 @@
-# ReactJS Quickstart
+# Meteorite - EthGlobal Online Arcade Game 🌠
 
-## Installation
+## Introduction
 
-```bash
-bun install
-bun start
-```
+Welcome to Meteorite, a captivating black and white pixel arcade sidescroller designed for the EthGlobal Online hackathon. As players, your mission is to collect as many coins as possible while evading the perilous meteors and treacherous bombs. Integrating XMTP allows players to interact and send each other messages during gameplay. Successfully reaching the end of the game rewards players with a unique NFT badge and an ERC-20 token representing the coins they've amassed. Meteorite is a multichain game and has been deployed on Mantle, Filecoin, and Scroll.
 
-## Concepts
+## Tech Stack
 
-Head to our docs to understand our concepts with our react SDK
+- Unity
+- Solidity
+- React
+- XMTP
+- Torus (Social Login)
+- IPFS (Web3.storage)
 
-- [Get started](https://xmtp.org/docs/build/get-started)
-- [Authentication](https://xmtp.org/docs/build/authentication)
-- [Conversations](https://xmtp.org/docs/build/conversations)
-- [Messages](https://xmtp.org/docs/build/messages/)
-- [Streams](https://xmtp.org/docs/build/streams/)
+## Gameplay Features
 
-#### Troubleshooting
+- **Dynamic Sidescroller**: Navigate through a monochrome pixelated world full of challenges and treasures.
+- **Collect Coins**: The primary objective is to gather coins scattered throughout the game.
+- **Dodge Obstacles**: Avoid getting hit by falling meteors or accidentally touching the bombs.
+- **Player Interaction**: Integrated XMTP allows players to communicate and send messages to each other.
+- **Login**: Simplified user experience with Torus social login (Google).
+- **Rewards**: On successfully completing the game, players can mint a unique NFT badge and an ERC-20 token correlating with the number of coins they've collected.
 
-If you get into issues with `Buffer` and `polyfills` check out the fix below:
+## Deployment
 
-1. Install the buffer dependency.
+Meteorite is proudly multichain and is currently deployed on:
 
-```bash
-npm i buffer
-```
+- Mantle
+- Filecoin
+- Scroll
 
-2. Create a new file, `polyfills.js`, in the root of your project.
+## Contributing
 
-```tsx
-import { Buffer } from "buffer";
+We welcome contributions from the community. Please submit a pull request or open an issue if you'd like to make improvements or suggest enhancements.
 
-window.Buffer = window.Buffer ?? Buffer;
-```
+## License
 
-3. Import it into your main file on the first line.
+This project is licensed under the MIT License. See `LICENSE` for more details.
 
-- ReacJS: `index.js` or `index.tsx`
-- VueJS: `main.js`
-- NuxtJS: `app.vue`
+## Acknowledgements
 
-```tsx
-//has to be on the first line of the file for it to work
-import "./polyfills";
-```
+A massive shoutout to EthGlobal for organizing the hackathon and to all participants and contributors for making Meteorite a reality.
 
-4. Update config files.
+---
 
-- Webpack: `vue.config.js` or `webpack.config.js`:
-
-```jsx
-const webpack = require("webpack");
-
-module.exports = {
-  configureWebpack: {
-    plugins: [
-      new webpack.ProvidePlugin({
-        Buffer: ["buffer", "Buffer"],
-      }),
-    ],
-  },
-  transpileDependencies: true,
-};
-```
-
-- Vite: `vite.config.js`:
-
-```jsx
-import { defineConfig } from "vite";
-import { Buffer } from "buffer";
-
-export default defineConfig({
-  /**/
-  define: {
-    global: {
-      Buffer: Buffer,
-    },
-  },
-  /**/
-});
-```
-
-- NuxtJS: `nuxt.config.js`:
-
-```tsx
-export default {
-  build: {
-    extend(config, { isClient }) {
-      if (isClient) {
-        config.node = {
-          Buffer: true,
-        };
-      }
-    },
-  },
-};
-```
+🌠 Enjoy the game and may the coins always be in your favor! 🌠
